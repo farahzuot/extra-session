@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% result.forEach(value=>{%>
+        <h3><%=value.type%></h3>
+        <p><%=value.text%></p>
+
+        <form action="/details/<%=value.id%>" method="get">
+            <input type="hidden" name="type" value="<%=value.type%>" id="">
+            <input type="hidden" name="text" value="<%=value.text%>" id="">
+            <input type="submit" name="submit" value="View details" id="">
+        </form>
+        <%})%>
+
+</body>
+</html>
